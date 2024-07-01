@@ -3,7 +3,7 @@
         Register
     </x-slot:heading>
 
-<form method="post" action="/jobs">
+<form method="post" action="">
   @csrf
 
   <div class="space-y-2">
@@ -48,7 +48,7 @@
         <div class="sm:col-span-4">
         <x-form-label for="password_confirmation">Confirm Password</x-form-label>
           <div class="mt-2">
-            <x-form-input name="password_confirmation" type="password_confirmation" id="password_confirmation" placeholder='CEO' required></x-form-input>
+            <x-form-input name="password_confirmation" type="password" id="password_confirmation" required></x-form-input>
             <x-form-error name="password_confirmation" />
           </div>
         </div>

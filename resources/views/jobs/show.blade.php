@@ -7,5 +7,7 @@
     <p>
         This job pays {{$job['salary']}} per year
     </p>
+    @can('edit', $job)
     <a class="mt-5 relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 cursor-default leading-5 rounded-md" href="{{$job->id}}/edit">Edit this job</a>
+    @endcan
 </x-layout>

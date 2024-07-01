@@ -30,6 +30,14 @@
           <x-navlink href="/login" active="{{request()->is('login')}}"> Login In</x-navlink>
           <x-navlink href="/register" active="{{request()->is('register')}}"> Register</x-navlink>
           @endguest
+
+          @auth
+            <form method="post" action="/logout">
+              @csrf
+              
+              <x-form-button>Log Out</x-form-button>
+            </form>
+          @endauth
         </div>
         <div class="-mr-2 flex md:hidden">
           <!-- Mobile menu button -->
